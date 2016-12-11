@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/index.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+
+</head>
+<body>
+	<div class="container  vertical-center">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Avaliador de segurança de senha</h3>
+			</div>
+			<div class="panel-body form-horizontal">
+				<div class="form-group">
+					<div class="information">
+						<input id="password" type="password" class="form-control" placeholder="Senha">
+
+						<div class="row"> <!-- 3 + 6 + 3 = 12 -->
+							<div class="col-md-9">
+								<span id="passwordscore" class="label label-default">0%</span>
+								<span id="passveryweek" class="label label-danger">Muito fraco</span>
+								<span id="passweek" class="label label-warning">Fraco</span>
+								<span id="passgood" class="label label-info">Bom</span>
+								<span id="passstrong" class="label label-primary">Forte</span>
+								<span id="passverystrong" class="label label-success">Muito forte</span>
+							</div>
+							<div class="col-md-3">
+								<label>
+									<input id="chshowpassword" type="checkbox"> Mostra senha
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
