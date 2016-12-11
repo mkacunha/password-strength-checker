@@ -18,7 +18,7 @@ function init(){
     var value = $edPassword.val();
 
     if (value){
-      $.post( "/password-strength-checker/analyzerpassword", { password: $edPassword.val() }, processaRetorno);
+      $.post( "/analyzerpassword", { password: $edPassword.val() }, processaRetorno);
     } else{
       $edScore.text('0 %');
       infoScoreAllHide();
