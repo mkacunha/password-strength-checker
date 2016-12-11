@@ -30,5 +30,12 @@
 	</dependencies>
 	<build>
 		<finalName>Password Strength Checker</finalName>
+		<plugins>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>1.1.2</version>
+			</plugin>
+		</plugins>
 	</build>
 </project>
