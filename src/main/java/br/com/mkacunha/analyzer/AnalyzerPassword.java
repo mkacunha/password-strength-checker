@@ -25,7 +25,6 @@ public class AnalyzerPassword {
 		for (Analyzer analyzer : analyzers) {
 			score += analyzer.analyzer(password);
 		}
-
 		password.setScore(score);
 	}
 
@@ -46,11 +45,5 @@ public class AnalyzerPassword {
 		analyzers.add(new SequentialLettersThree());
 		analyzers.add(new SequentialNumbersThree());
 		analyzers.add(new SequentialSymbolsThree());
-	}
-
-	public static void main(String[] args) {
-		Password password = new Password("ko o");
-		new AnalyzerPassword().toAnalyze(password);
-		System.out.println(password.getScore());
 	}
 }
