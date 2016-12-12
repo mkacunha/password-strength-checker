@@ -7,7 +7,7 @@ public class Symbols implements Analyzer {
 	public int analyzer(Password password) {
 		int count = 0;
 		for (int i = 0; i < password.length(); i++) {
-			if (password.getCharacter(i).matches("[^a-zA-Z0-9_]"))
+			if (password.getCharacter(i).matches("[^a-zA-Z0-9_]") && !password.getCharacter(i).trim().isEmpty())
 				count++;
 		}
 

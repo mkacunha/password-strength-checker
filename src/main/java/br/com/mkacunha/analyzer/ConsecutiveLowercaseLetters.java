@@ -10,6 +10,10 @@ public class ConsecutiveLowercaseLetters implements Analyzer {
 		for (int i = 0; i < password.length(); i++) {
 			if (i > 0) {
 				String characterPrevious = password.getCharacter(i - 1);
+
+				if (characterPrevious.trim().isEmpty() && i > 1)
+					characterPrevious = password.getCharacter(i - 2);
+
 				String characterCurrent = password.getCharacter(i);
 
 				if (characterPrevious.matches("[a-z]") && characterCurrent.matches("[a-z]"))
@@ -18,7 +22,7 @@ public class ConsecutiveLowercaseLetters implements Analyzer {
 		}
 
 		if (count > 0)
-			return count * -2;
+			return (count) * -2;
 
 		return 0;
 	}

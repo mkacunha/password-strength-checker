@@ -11,11 +11,11 @@ public class MiddleNumbersOrSymbols implements Analyzer {
 
 			String car = password.getCharacter(i);
 
-			if (car.matches("[0-9]")) {
+			if (car.matches("[0-9]") && !password.getCharacter(i).trim().isEmpty()) {
 				if (i > 0 && i < (password.length() - 1)) {
 					nMidChar++;
 				}
-			} else if (car.matches("[^a-zA-Z0-9_]")) {
+			} else if (car.matches("[^a-zA-Z0-9_]") && !password.getCharacter(i).trim().isEmpty()) {
 				if (i > 0 && i < (password.length() - 1)) {
 					nMidChar++;
 				}

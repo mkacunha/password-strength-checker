@@ -72,6 +72,16 @@ public class AnalyzerPasswordTest {
 	}
 
 	@Test
+	public void senhaContendoUnderline() {
+		assertEquals(29, analyzePassword("12345_"));
+	}
+
+	@Test
+	public void senhaContendoEspaco() {
+		assertEquals(12, analyzePassword("koiuy o"));
+	}
+
+	@Test
 	public void senhasAleatorias() {
 		assertEquals(0, analyzePassword("99"));
 		assertEquals(100, analyzePassword("-//..-09_098"));
@@ -98,6 +108,6 @@ public class AnalyzerPasswordTest {
 		assertEquals(86, analyzePassword("[]{}[]{}"));
 		assertEquals(44, analyzePassword("˜`:;"));
 		assertEquals(12, analyzePassword("maikoouuu_"));
-		assertEquals(29, analyzePassword("12345_"));
+		assertEquals(5, analyzePassword("ko o"));
 	}
 }

@@ -7,7 +7,7 @@ public class RepeatCharacters implements Analyzer {
 	public int analyzer(Password password) {
 		int nRepChar = 0;
 
-		String pass = password.getPassword();
+		String pass = password.getPassword().replace(" ", "");
 		int length = pass.length();
 		double nRepInc = 0;
 		double nUnqChar = 0;
