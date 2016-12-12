@@ -1,4 +1,4 @@
-package br.com.mkacunha.servelet;
+package br.com.mkacunha.servlet;
 
 import java.io.IOException;
 
