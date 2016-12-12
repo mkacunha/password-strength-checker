@@ -23,7 +23,10 @@ public class AnalyzerPassword {
 		int score = 0;
 
 		for (Analyzer analyzer : analyzers) {
-			score += analyzer.analyzer(password);
+			int variable = analyzer.analyzer(password);
+			System.out.println(variable);
+
+			score += variable;
 		}
 		password.setScore(score);
 	}

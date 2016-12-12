@@ -6,7 +6,7 @@ public class NumbersOnly implements Analyzer {
 
 	public int analyzer(Password password) {
 		for (int i = 0; i < password.length(); i++) {
-			if (!password.getCharacter(i).matches("[0-9]"))
+			if (password.getCharacter(i).matches("[^a-zA-Z0-9_]") || password.getCharacter(i).matches("[a-zA-Z]"))
 				return 0;
 		}
 

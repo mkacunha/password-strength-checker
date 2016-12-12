@@ -97,5 +97,7 @@ public class AnalyzerPasswordTest {
 		assertEquals(59, analyzePassword("''''[]"));
 		assertEquals(86, analyzePassword("[]{}[]{}"));
 		assertEquals(44, analyzePassword("˜`:;"));
+		assertEquals(12, analyzePassword("maikoouuu_"));
+		assertEquals(29, analyzePassword("12345_"));
 	}
 }
